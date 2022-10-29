@@ -1,0 +1,16 @@
+InputCollect <- robyn_inputs(
+   dt_input = "{{ header.dt_input }}"
+  ,dt_holidays = "{{ header.dt_holidays }}"
+  ,date_var = "{{ header.date_var }}" # date format must be "2020-01-01"
+  ,dep_var = "{{ header.dep_var }}" # there should be only one dependent variable
+  ,dep_var_type = "{{ header.dep_var_type }}" # "revenue" (ROI) or "conversion" (CPA)
+  ,prophet_vars = c({% for var in header.prophet_vars %} "{{ var }}", {% endfor %})# "trend","season", "weekday" & "holiday"
+  ,prophet_country = {{ header.prophet_country }} # input one country. dt_prophet_holidays includes 59 countries by default
+  ,context_vars = c({% for var in variables.context_vars %} "{{ var }}", {% endfor %}) # e.g. competitors, discount, unemployment etc
+  ,paid_media_spends = c({% for var in variables.paid_media_spends %} "{{ var }}", {% endfor %}) # mandatory input
+  ,paid_media_vars = c({% for var in variables.paid_media_vars %} "{{ var }}", {% endfor %}) # mandatory.
+  # paid_media_vars must have same order as paid_media_spends. Use media exposure metrics like
+  # impressions, GRP etc. If not applicable, use spend instead.
+  ,window_start = "{{ header.window_start }}"
+  ,window_end = "{{ header.window_end }}"
+  ,adstock = "{{ header.adstock }}"

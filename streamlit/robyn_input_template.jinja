@@ -1,0 +1,85 @@
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+
+library("reticulate")
+
+use_virtualenv(args[1])
+
+library(Robyn)
+
+Sys.setenv(R_FUTURE_FORK_ENABLE="true")
+options(future.fork.enable = TRUE)
+
+dat <- read.csv("{{ config.data_input_filename }}")
+
+data("dt_prophet_holidays")
+
+robyn_object <- "{{ config.model_name }}.RDS"
+
+
+
+
+InputCollect <- robyn_inputs(
+   dt_input = {{ header.dt_input }}
+  ,dt_holidays = {{ header.dt_holidays }}
+  ,date_var = "{{ header.date_var }}" # date format must be "2020-01-01"
+  ,dep_var = "{{ header.dep_var }}" # there should be only one dependent variable
+  ,dep_var_type = "{{ header.dep_var_type }}" # "revenue" (ROI) or "conversion" (CPA)
+  ,prophet_vars = c({% for var in header.prophet_vars %} "{{ var }}"{% if not loop.last %}, {% endif %}{% endfor %})# "trend","season", "weekday" & "holiday" # nolint # nolint
+  ,prophet_country = "{{ header.prophet_country }}" # input one country. dt_prophet_holidays includes 59 countries by default
+  ,context_vars = c({% for var in variables.context_vars %} "{{ var }}"{% if not loop.last %}, {% endif %}{% endfor %}) # e.g. competitors, discount, unemployment etc
+  ,paid_media_spends = c({% for var in variables.paid_media_spends %} "{{ var }}"{% if not loop.last %}, {% endif %}{% endfor %}) # mandatory input
+  ,paid_media_vars = c({% for var in variables.paid_media_vars %} "{{ var }}"{% if not loop.last %}, {% endif %}{% endfor %}) # mandatory.
+  # paid_media_vars must have same order as paid_media_spends. Use media exposure metrics like
+  # impressions, GRP etc. If not applicable, use spend instead.
+  ,window_start = "{{ header.window_start }}"
+  ,window_end = "{{ header.window_end }}"
+  ,adstock = "{{ header.adstock }}"
+  )
+
+hyperparameters <- list(
+   {% for var in variables.paid_media_spends %}
+   {{ var }}_alphas = c(0.5,3),
+   {{ var }}_gammas = c(0.3,1),
+   {% if 'TV' in var %}
+   {{ var }}_thetas = c(0.3,0.8){% if not loop.last %}, {% endif %}
+   {% else %}
+   {{ var }}_thetas = c(0,0.3){% if not loop.last %}, {% endif %}
+   {% endif %}
+   {% endfor %})
+
+plot_adstock(plot = FALSE)
+plot_saturation(plot = FALSE)
+
+InputCollect <- robyn_inputs(InputCollect = InputCollect, hyperparameters = hyperparameters)
+print(InputCollect)
+
+OutputModels <- robyn_run(
+  InputCollect = InputCollect # feed in all model specification
+  #, cores = NULL # default
+  #, add_penalty_factor = FALSE # Untested feature. Use with caution.
+  , iterations = 2000 # recommended for the dummy dataset
+  , trials = 5 # recommended for the dummy dataset
+  , outputs = FALSE # outputs = FALSE disables direct model output
+)
+print(OutputModels)
+
+OutputCollect <- robyn_outputs(
+  InputCollect, OutputModels
+  , pareto_fronts = 3
+  # , calibration_constraint = 0.1 # range c(0.01, 0.1) & default at 0.1
+  , csv_out = "pareto" # "pareto" or "all"
+  , clusters = TRUE # Set to TRUE to cluster similar models by ROAS. See ?robyn_clusters
+  , plot_pareto = TRUE # Set to FALSE to deactivate plotting and saving model one-pagers
+  , plot_folder = robyn_object # path for plots export
+)
+print(OutputCollect)
+
+ExportedModel <- robyn_save(
+  robyn_object = robyn_object # model object location and name
+  , InputCollect = InputCollect
+  , OutputCollect = OutputCollect
+)
+print(ExportedModel)
+
+save.image(file = "{{ config.model_name }}.RData")
