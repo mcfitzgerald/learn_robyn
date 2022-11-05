@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.io as pio
 import plotly.express as px
 import jinja2
+import configparser
 from robyn_input_helper_funcs import generate_var_dict
 import mcf_plotly_theme
 
@@ -10,8 +11,11 @@ pio.templates.default = "mike"
 
 st.title("Robyn Input Prep")
 
-st.header("Upload a CSV containing Robyn Input")
-uploaded_file = st.file_uploader("Choose a file")
+st.header("Upload a CSV containing input data")
+uploaded_file = st.file_uploader("Choose a file", key=1)
+
+st.header("Upload variable name config file (TOML format)")
+config_file = st.file_uploader("Choose a file", key=2)
 
 st.header("Data Preview")
 if uploaded_file is not None:
@@ -24,9 +28,15 @@ else:
 columns = df.columns.to_list()
 
 # Create dictionary of variable types, e.g. Spend, Sales, TV, etc. for easier prep
-var_dict = generate_var_dict(
-    df, column_tags=[r"SPEND", r"PRICE", r"SALES_VALUE", r"IMPRESSIONS|TRP"]
-)
+#var_dict = generate_var_dict(
+#    df, column_tags=[r"SPEND", r"PRICE", r"SALES_VALUE", r"IMPRESSIONS|TRP"]
+#)
+
+# Parse config toml 
+config = configparser.ConfigParser()
+config.read_string(config_file.getvalue().decode('utf-8'))
+
+config['Variable_Categories']
 
 st.header("Configuration")
 model_name = st.text_input("Model Name (reference name for model files)", value="robyn_model")
@@ -40,7 +50,7 @@ date_var = st.selectbox(
 )
 dep_var = st.selectbox(
     "Select response variable (e.g. Sales)",
-    var_dict["SALES_VALUE"],
+    var_dict["SALES"],
 )
 order_warning = '<p style="color:Red;"><b>NOTE: media spends and media impact vars must be in same order</b></p>'
 st.markdown(order_warning, unsafe_allow_html=True)
