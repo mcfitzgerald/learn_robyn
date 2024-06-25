@@ -27,10 +27,10 @@ else:
 
 columns = df.columns.to_list()
 
-# Create dictionary of variable types, e.g. Spend, Sales, TV, etc. for easier prep
-#var_dict = generate_var_dict(
-#    df, column_tags=[r"SPEND", r"PRICE", r"SALES_VALUE", r"IMPRESSIONS|TRP"]
-#)
+#Create dictionary of variable types, e.g. Spend, Sales, TV, etc. for easier prep
+var_dict = generate_var_dict(
+   df, column_tags=[r"SPEND", r"PRICE", r"SALES_VALUE", r"IMPRESSIONS|TRP"]
+)
 
 # Parse config toml 
 config = configparser.ConfigParser()
@@ -49,8 +49,7 @@ date_var = st.selectbox(
     "Select independent variable (e.g. date variable)", columns, index=0
 )
 dep_var = st.selectbox(
-    "Select response variable (e.g. Sales)",
-    var_dict["SALES"],
+    "Select response variable (e.g. Sales)", columns, index=0
 )
 order_warning = '<p style="color:Red;"><b>NOTE: media spends and media impact vars must be in same order</b></p>'
 st.markdown(order_warning, unsafe_allow_html=True)

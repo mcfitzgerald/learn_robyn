@@ -1,2 +1,2 @@
 library(reticulate)
-use_virtualenv(virtualenv = "/Users/MikeFitzgerald/.venvs/pydev", required = TRUE)
+use_virtualenv(virtualenv = "/Users/michael/.venvs/pydev", required = TRUE)
