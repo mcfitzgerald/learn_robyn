@@ -1,5 +1,4 @@
 [Variable_Categories]
 DATE = [date]
-SPEND = [tv.spend, search.spend]
-SALES = [brand.sales, competitor.sales, revenue, profit]
-IMPRESSIONS = [tv.volume, search.clicks, search.imps, search.matching.query.volume, search.query.volume]
+SPEND = [tv_A, web_A, tv_B, web_B]
+SALES = [Total_Purchases_A, Total_Purchases_B]
