@@ -1,9 +1,8 @@
 #!/usr/bin/env Rscript
-args = commandArgs(trailingOnly=TRUE)
 
 library("reticulate")
 
-use_virtualenv(args[1])
+use_virtualenv(virtualenv = "/Users/MikeFitzgerald/venvs/pydev", required = TRUE)
 
 library(Robyn)
 

@@ -1,0 +1,1939 @@
+{
+  "InputCollect": {
+    "date_var": ["Date"],
+    "dayInterval": [7],
+    "intervalType": ["week"],
+    "dep_var": ["Total_Sales_A"],
+    "dep_var_type": ["revenue"],
+    "prophet_vars": [],
+    "context_vars": ["Total_Sales_B"],
+    "context_signs": ["default"],
+    "paid_media_vars": ["tv_A", "web_A"],
+    "paid_media_signs": ["positive", "positive"],
+    "paid_media_spends": ["tv_A", "web_A"],
+    "paid_media_total": [400000],
+    "exposure_vars": [],
+    "all_media": ["tv_A", "web_A"],
+    "all_ind_vars": ["Total_Sales_B", "tv_A", "web_A"],
+    "unused_vars": ["tv_A.1", "web_A.1"],
+    "window_start": ["2022-01-02"],
+    "rollingWindowStartWhich": [1],
+    "window_end": ["2025-12-21"],
+    "rollingWindowEndWhich": [208],
+    "rollingWindowLength": [208],
+    "totalObservations": [208],
+    "refreshAddedStart": ["2022-01-02"],
+    "adstock": ["geometric"],
+    "hyperparameters": {
+      "tv_A_alphas": [0.1, 5],
+      "tv_A_gammas": [0.1, 1],
+      "tv_A_thetas": [0, 0.5],
+      "web_A_alphas": [0.1, 5],
+      "web_A_gammas": [0.1, 1],
+      "web_A_thetas": [0, 0.5],
+      "train_size": [0.5, 0.8]
+    },
+    "calibration_input": {},
+    "custom_params": [],
+    "version": ["Robyn (stable) v3.11.0 [R-4.4.1]"]
+  },
+  "ModelsCollect": {
+    "ts_validation": [false],
+    "train_timestamp": ["2024-06-26 13:08:36"],
+    "export_timestamp": ["2024-06-26 13:08:56"],
+    "run_time": ["2.92 min"],
+    "outputs_time": ["0.34 min"],
+    "total_time": ["3.26 min"],
+    "total_iters": [10000],
+    "conv_msg": ["DECOMP.RSSD NOT converged", "NRMSE NOT converged"],
+    "n_clusters": [6],
+    "calibration_constraint": [0.1],
+    "cores": [9],
+    "iterations": [2000],
+    "trials": [5],
+    "intercept": [true],
+    "intercept_sign": ["non_negative"],
+    "nevergrad_algo": ["TwoPointsDE"],
+    "add_penalty_factor": [false],
+    "seed": [123],
+    "pareto_fronts": [3],
+    "hyper_fixed": [false],
+    "plot_folder": ["./Robyn_202406261308_init/"]
+  },
+  "Extras": {
+    "raw_data": [
+      {
+        "Date": "2022-01-02",
+        "Total_Sales_A": 6485000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2275000
+      },
+      {
+        "Date": "2022-01-09",
+        "Total_Sales_A": 6565000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2335000
+      },
+      {
+        "Date": "2022-01-16",
+        "Total_Sales_A": 6635000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2220000
+      },
+      {
+        "Date": "2022-01-23",
+        "Total_Sales_A": 6190000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2470000
+      },
+      {
+        "Date": "2022-01-30",
+        "Total_Sales_A": 6465000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 2300000
+      },
+      {
+        "Date": "2022-02-06",
+        "Total_Sales_A": 6820000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1845000
+      },
+      {
+        "Date": "2022-02-13",
+        "Total_Sales_A": 6740000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1930000
+      },
+      {
+        "Date": "2022-02-20",
+        "Total_Sales_A": 6835000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1790000
+      },
+      {
+        "Date": "2022-02-27",
+        "Total_Sales_A": 6990000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1860000
+      },
+      {
+        "Date": "2022-03-06",
+        "Total_Sales_A": 7145000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1805000
+      },
+      {
+        "Date": "2022-03-13",
+        "Total_Sales_A": 6945000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1845000
+      },
+      {
+        "Date": "2022-03-20",
+        "Total_Sales_A": 6780000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1865000
+      },
+      {
+        "Date": "2022-03-27",
+        "Total_Sales_A": 6965000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1820000
+      },
+      {
+        "Date": "2022-04-03",
+        "Total_Sales_A": 6815000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1920000
+      },
+      {
+        "Date": "2022-04-10",
+        "Total_Sales_A": 6785000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1745000
+      },
+      {
+        "Date": "2022-04-17",
+        "Total_Sales_A": 7200000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1860000
+      },
+      {
+        "Date": "2022-04-24",
+        "Total_Sales_A": 6900000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1945000
+      },
+      {
+        "Date": "2022-05-01",
+        "Total_Sales_A": 6720000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2110000
+      },
+      {
+        "Date": "2022-05-08",
+        "Total_Sales_A": 6560000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2075000
+      },
+      {
+        "Date": "2022-05-15",
+        "Total_Sales_A": 6990000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2030000
+      },
+      {
+        "Date": "2022-05-22",
+        "Total_Sales_A": 6460000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2115000
+      },
+      {
+        "Date": "2022-05-29",
+        "Total_Sales_A": 6565000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2225000
+      },
+      {
+        "Date": "2022-06-05",
+        "Total_Sales_A": 6565000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2175000
+      },
+      {
+        "Date": "2022-06-12",
+        "Total_Sales_A": 6705000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2140000
+      },
+      {
+        "Date": "2022-06-19",
+        "Total_Sales_A": 6430000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2305000
+      },
+      {
+        "Date": "2022-06-26",
+        "Total_Sales_A": 6650000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2150000
+      },
+      {
+        "Date": "2022-07-03",
+        "Total_Sales_A": 6420000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2275000
+      },
+      {
+        "Date": "2022-07-10",
+        "Total_Sales_A": 6585000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2180000
+      },
+      {
+        "Date": "2022-07-17",
+        "Total_Sales_A": 6480000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2240000
+      },
+      {
+        "Date": "2022-07-24",
+        "Total_Sales_A": 6335000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2225000
+      },
+      {
+        "Date": "2022-07-31",
+        "Total_Sales_A": 6430000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2325000
+      },
+      {
+        "Date": "2022-08-07",
+        "Total_Sales_A": 6500000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 2255000
+      },
+      {
+        "Date": "2022-08-14",
+        "Total_Sales_A": 6840000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1905000
+      },
+      {
+        "Date": "2022-08-21",
+        "Total_Sales_A": 6995000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1855000
+      },
+      {
+        "Date": "2022-08-28",
+        "Total_Sales_A": 7045000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1685000
+      },
+      {
+        "Date": "2022-09-04",
+        "Total_Sales_A": 7040000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1760000
+      },
+      {
+        "Date": "2022-09-11",
+        "Total_Sales_A": 6990000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1775000
+      },
+      {
+        "Date": "2022-09-18",
+        "Total_Sales_A": 6970000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1725000
+      },
+      {
+        "Date": "2022-09-25",
+        "Total_Sales_A": 7005000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1745000
+      },
+      {
+        "Date": "2022-10-02",
+        "Total_Sales_A": 6895000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1860000
+      },
+      {
+        "Date": "2022-10-09",
+        "Total_Sales_A": 7105000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1765000
+      },
+      {
+        "Date": "2022-10-16",
+        "Total_Sales_A": 7100000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1730000
+      },
+      {
+        "Date": "2022-10-23",
+        "Total_Sales_A": 6930000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1795000
+      },
+      {
+        "Date": "2022-10-30",
+        "Total_Sales_A": 6930000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1870000
+      },
+      {
+        "Date": "2022-11-06",
+        "Total_Sales_A": 6870000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1895000
+      },
+      {
+        "Date": "2022-11-13",
+        "Total_Sales_A": 6895000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1900000
+      },
+      {
+        "Date": "2022-11-20",
+        "Total_Sales_A": 6780000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1980000
+      },
+      {
+        "Date": "2022-11-27",
+        "Total_Sales_A": 6835000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1995000
+      },
+      {
+        "Date": "2022-12-04",
+        "Total_Sales_A": 6795000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1940000
+      },
+      {
+        "Date": "2022-12-11",
+        "Total_Sales_A": 6740000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1990000
+      },
+      {
+        "Date": "2022-12-18",
+        "Total_Sales_A": 6710000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2070000
+      },
+      {
+        "Date": "2022-12-25",
+        "Total_Sales_A": 6455000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2195000
+      },
+      {
+        "Date": "2023-01-01",
+        "Total_Sales_A": 6610000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2110000
+      },
+      {
+        "Date": "2023-01-08",
+        "Total_Sales_A": 6605000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2260000
+      },
+      {
+        "Date": "2023-01-15",
+        "Total_Sales_A": 6570000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2310000
+      },
+      {
+        "Date": "2023-01-22",
+        "Total_Sales_A": 6455000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2260000
+      },
+      {
+        "Date": "2023-01-29",
+        "Total_Sales_A": 6755000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 2135000
+      },
+      {
+        "Date": "2023-02-05",
+        "Total_Sales_A": 6780000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1815000
+      },
+      {
+        "Date": "2023-02-12",
+        "Total_Sales_A": 7195000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1775000
+      },
+      {
+        "Date": "2023-02-19",
+        "Total_Sales_A": 6910000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1640000
+      },
+      {
+        "Date": "2023-02-26",
+        "Total_Sales_A": 7170000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1735000
+      },
+      {
+        "Date": "2023-03-05",
+        "Total_Sales_A": 7075000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1695000
+      },
+      {
+        "Date": "2023-03-12",
+        "Total_Sales_A": 7025000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1820000
+      },
+      {
+        "Date": "2023-03-19",
+        "Total_Sales_A": 7030000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1680000
+      },
+      {
+        "Date": "2023-03-26",
+        "Total_Sales_A": 7035000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1770000
+      },
+      {
+        "Date": "2023-04-02",
+        "Total_Sales_A": 7090000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1820000
+      },
+      {
+        "Date": "2023-04-09",
+        "Total_Sales_A": 6995000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1640000
+      },
+      {
+        "Date": "2023-04-16",
+        "Total_Sales_A": 7135000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1785000
+      },
+      {
+        "Date": "2023-04-23",
+        "Total_Sales_A": 6850000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1980000
+      },
+      {
+        "Date": "2023-04-30",
+        "Total_Sales_A": 6750000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1995000
+      },
+      {
+        "Date": "2023-05-07",
+        "Total_Sales_A": 6775000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1900000
+      },
+      {
+        "Date": "2023-05-14",
+        "Total_Sales_A": 6675000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2090000
+      },
+      {
+        "Date": "2023-05-21",
+        "Total_Sales_A": 6850000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2065000
+      },
+      {
+        "Date": "2023-05-28",
+        "Total_Sales_A": 6545000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2110000
+      },
+      {
+        "Date": "2023-06-04",
+        "Total_Sales_A": 6665000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2145000
+      },
+      {
+        "Date": "2023-06-11",
+        "Total_Sales_A": 6550000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2115000
+      },
+      {
+        "Date": "2023-06-18",
+        "Total_Sales_A": 6750000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2145000
+      },
+      {
+        "Date": "2023-06-25",
+        "Total_Sales_A": 6730000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2130000
+      },
+      {
+        "Date": "2023-07-02",
+        "Total_Sales_A": 6675000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2045000
+      },
+      {
+        "Date": "2023-07-09",
+        "Total_Sales_A": 6575000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2175000
+      },
+      {
+        "Date": "2023-07-16",
+        "Total_Sales_A": 6415000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2215000
+      },
+      {
+        "Date": "2023-07-23",
+        "Total_Sales_A": 6480000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2335000
+      },
+      {
+        "Date": "2023-07-30",
+        "Total_Sales_A": 6640000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2145000
+      },
+      {
+        "Date": "2023-08-06",
+        "Total_Sales_A": 6710000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 2240000
+      },
+      {
+        "Date": "2023-08-13",
+        "Total_Sales_A": 6865000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1765000
+      },
+      {
+        "Date": "2023-08-20",
+        "Total_Sales_A": 7265000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1730000
+      },
+      {
+        "Date": "2023-08-27",
+        "Total_Sales_A": 6975000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1725000
+      },
+      {
+        "Date": "2023-09-03",
+        "Total_Sales_A": 6770000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1750000
+      },
+      {
+        "Date": "2023-09-10",
+        "Total_Sales_A": 7295000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1675000
+      },
+      {
+        "Date": "2023-09-17",
+        "Total_Sales_A": 7080000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1730000
+      },
+      {
+        "Date": "2023-09-24",
+        "Total_Sales_A": 6940000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1860000
+      },
+      {
+        "Date": "2023-10-01",
+        "Total_Sales_A": 6990000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1700000
+      },
+      {
+        "Date": "2023-10-08",
+        "Total_Sales_A": 7135000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1670000
+      },
+      {
+        "Date": "2023-10-15",
+        "Total_Sales_A": 7020000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1705000
+      },
+      {
+        "Date": "2023-10-22",
+        "Total_Sales_A": 7120000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1635000
+      },
+      {
+        "Date": "2023-10-29",
+        "Total_Sales_A": 6755000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1885000
+      },
+      {
+        "Date": "2023-11-05",
+        "Total_Sales_A": 6925000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1870000
+      },
+      {
+        "Date": "2023-11-12",
+        "Total_Sales_A": 6835000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1875000
+      },
+      {
+        "Date": "2023-11-19",
+        "Total_Sales_A": 6905000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1975000
+      },
+      {
+        "Date": "2023-11-26",
+        "Total_Sales_A": 6785000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2030000
+      },
+      {
+        "Date": "2023-12-03",
+        "Total_Sales_A": 6770000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2210000
+      },
+      {
+        "Date": "2023-12-10",
+        "Total_Sales_A": 6550000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1895000
+      },
+      {
+        "Date": "2023-12-17",
+        "Total_Sales_A": 6915000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2150000
+      },
+      {
+        "Date": "2023-12-24",
+        "Total_Sales_A": 6595000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2040000
+      },
+      {
+        "Date": "2023-12-31",
+        "Total_Sales_A": 6725000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2115000
+      },
+      {
+        "Date": "2024-01-07",
+        "Total_Sales_A": 6675000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2025000
+      },
+      {
+        "Date": "2024-01-14",
+        "Total_Sales_A": 6765000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1985000
+      },
+      {
+        "Date": "2024-01-21",
+        "Total_Sales_A": 6660000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2080000
+      },
+      {
+        "Date": "2024-01-28",
+        "Total_Sales_A": 6450000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 2070000
+      },
+      {
+        "Date": "2024-02-04",
+        "Total_Sales_A": 7180000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1755000
+      },
+      {
+        "Date": "2024-02-11",
+        "Total_Sales_A": 6925000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1785000
+      },
+      {
+        "Date": "2024-02-18",
+        "Total_Sales_A": 7030000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1800000
+      },
+      {
+        "Date": "2024-02-25",
+        "Total_Sales_A": 7340000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1690000
+      },
+      {
+        "Date": "2024-03-03",
+        "Total_Sales_A": 7220000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1605000
+      },
+      {
+        "Date": "2024-03-10",
+        "Total_Sales_A": 7150000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1560000
+      },
+      {
+        "Date": "2024-03-17",
+        "Total_Sales_A": 7305000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1510000
+      },
+      {
+        "Date": "2024-03-24",
+        "Total_Sales_A": 6960000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1725000
+      },
+      {
+        "Date": "2024-03-31",
+        "Total_Sales_A": 7235000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1670000
+      },
+      {
+        "Date": "2024-04-07",
+        "Total_Sales_A": 6890000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1850000
+      },
+      {
+        "Date": "2024-04-14",
+        "Total_Sales_A": 7085000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1635000
+      },
+      {
+        "Date": "2024-04-21",
+        "Total_Sales_A": 6945000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1845000
+      },
+      {
+        "Date": "2024-04-28",
+        "Total_Sales_A": 6970000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1670000
+      },
+      {
+        "Date": "2024-05-05",
+        "Total_Sales_A": 6800000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2045000
+      },
+      {
+        "Date": "2024-05-12",
+        "Total_Sales_A": 6860000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1885000
+      },
+      {
+        "Date": "2024-05-19",
+        "Total_Sales_A": 6715000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1965000
+      },
+      {
+        "Date": "2024-05-26",
+        "Total_Sales_A": 6810000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1985000
+      },
+      {
+        "Date": "2024-06-02",
+        "Total_Sales_A": 6765000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2150000
+      },
+      {
+        "Date": "2024-06-09",
+        "Total_Sales_A": 6825000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1985000
+      },
+      {
+        "Date": "2024-06-16",
+        "Total_Sales_A": 6790000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1980000
+      },
+      {
+        "Date": "2024-06-23",
+        "Total_Sales_A": 6820000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1965000
+      },
+      {
+        "Date": "2024-06-30",
+        "Total_Sales_A": 6665000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2145000
+      },
+      {
+        "Date": "2024-07-07",
+        "Total_Sales_A": 6785000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1965000
+      },
+      {
+        "Date": "2024-07-14",
+        "Total_Sales_A": 6480000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2255000
+      },
+      {
+        "Date": "2024-07-21",
+        "Total_Sales_A": 6700000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2130000
+      },
+      {
+        "Date": "2024-07-28",
+        "Total_Sales_A": 6705000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2265000
+      },
+      {
+        "Date": "2024-08-04",
+        "Total_Sales_A": 6705000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1930000
+      },
+      {
+        "Date": "2024-08-11",
+        "Total_Sales_A": 7000000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1665000
+      },
+      {
+        "Date": "2024-08-18",
+        "Total_Sales_A": 7320000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1585000
+      },
+      {
+        "Date": "2024-08-25",
+        "Total_Sales_A": 6965000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1785000
+      },
+      {
+        "Date": "2024-09-01",
+        "Total_Sales_A": 6920000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1650000
+      },
+      {
+        "Date": "2024-09-08",
+        "Total_Sales_A": 6985000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1670000
+      },
+      {
+        "Date": "2024-09-15",
+        "Total_Sales_A": 7095000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1755000
+      },
+      {
+        "Date": "2024-09-22",
+        "Total_Sales_A": 7120000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1720000
+      },
+      {
+        "Date": "2024-09-29",
+        "Total_Sales_A": 7315000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1585000
+      },
+      {
+        "Date": "2024-10-06",
+        "Total_Sales_A": 6990000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1705000
+      },
+      {
+        "Date": "2024-10-13",
+        "Total_Sales_A": 7230000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1680000
+      },
+      {
+        "Date": "2024-10-20",
+        "Total_Sales_A": 7115000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1725000
+      },
+      {
+        "Date": "2024-10-27",
+        "Total_Sales_A": 7165000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1620000
+      },
+      {
+        "Date": "2024-11-03",
+        "Total_Sales_A": 7020000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1830000
+      },
+      {
+        "Date": "2024-11-10",
+        "Total_Sales_A": 6935000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1700000
+      },
+      {
+        "Date": "2024-11-17",
+        "Total_Sales_A": 6675000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2080000
+      },
+      {
+        "Date": "2024-11-24",
+        "Total_Sales_A": 6745000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1930000
+      },
+      {
+        "Date": "2024-12-01",
+        "Total_Sales_A": 6930000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1950000
+      },
+      {
+        "Date": "2024-12-08",
+        "Total_Sales_A": 6960000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2010000
+      },
+      {
+        "Date": "2024-12-15",
+        "Total_Sales_A": 6650000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2010000
+      },
+      {
+        "Date": "2024-12-22",
+        "Total_Sales_A": 6780000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1920000
+      },
+      {
+        "Date": "2024-12-29",
+        "Total_Sales_A": 6620000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2025000
+      },
+      {
+        "Date": "2025-01-05",
+        "Total_Sales_A": 6875000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2170000
+      },
+      {
+        "Date": "2025-01-12",
+        "Total_Sales_A": 6730000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1990000
+      },
+      {
+        "Date": "2025-01-19",
+        "Total_Sales_A": 6770000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1960000
+      },
+      {
+        "Date": "2025-01-26",
+        "Total_Sales_A": 6770000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1995000
+      },
+      {
+        "Date": "2025-02-02",
+        "Total_Sales_A": 7170000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1610000
+      },
+      {
+        "Date": "2025-02-09",
+        "Total_Sales_A": 7180000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1725000
+      },
+      {
+        "Date": "2025-02-16",
+        "Total_Sales_A": 7150000,
+        "tv_A": 7500,
+        "web_A": 0,
+        "tv_A.1": 7500,
+        "web_A.1": 0,
+        "Total_Sales_B": 1620000
+      },
+      {
+        "Date": "2025-02-23",
+        "Total_Sales_A": 7180000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1610000
+      },
+      {
+        "Date": "2025-03-02",
+        "Total_Sales_A": 6885000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1815000
+      },
+      {
+        "Date": "2025-03-09",
+        "Total_Sales_A": 7235000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1635000
+      },
+      {
+        "Date": "2025-03-16",
+        "Total_Sales_A": 7125000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1555000
+      },
+      {
+        "Date": "2025-03-23",
+        "Total_Sales_A": 7155000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1550000
+      },
+      {
+        "Date": "2025-03-30",
+        "Total_Sales_A": 7120000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1545000
+      },
+      {
+        "Date": "2025-04-06",
+        "Total_Sales_A": 7295000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1620000
+      },
+      {
+        "Date": "2025-04-13",
+        "Total_Sales_A": 6990000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1675000
+      },
+      {
+        "Date": "2025-04-20",
+        "Total_Sales_A": 6900000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1650000
+      },
+      {
+        "Date": "2025-04-27",
+        "Total_Sales_A": 7060000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2065000
+      },
+      {
+        "Date": "2025-05-04",
+        "Total_Sales_A": 7015000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1810000
+      },
+      {
+        "Date": "2025-05-11",
+        "Total_Sales_A": 6880000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1905000
+      },
+      {
+        "Date": "2025-05-18",
+        "Total_Sales_A": 6665000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1890000
+      },
+      {
+        "Date": "2025-05-25",
+        "Total_Sales_A": 6905000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2060000
+      },
+      {
+        "Date": "2025-06-01",
+        "Total_Sales_A": 6630000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2085000
+      },
+      {
+        "Date": "2025-06-08",
+        "Total_Sales_A": 6960000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1935000
+      },
+      {
+        "Date": "2025-06-15",
+        "Total_Sales_A": 6580000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2050000
+      },
+      {
+        "Date": "2025-06-22",
+        "Total_Sales_A": 6895000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1965000
+      },
+      {
+        "Date": "2025-06-29",
+        "Total_Sales_A": 6945000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2010000
+      },
+      {
+        "Date": "2025-07-06",
+        "Total_Sales_A": 6740000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1990000
+      },
+      {
+        "Date": "2025-07-13",
+        "Total_Sales_A": 6560000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 2050000
+      },
+      {
+        "Date": "2025-07-20",
+        "Total_Sales_A": 6855000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1900000
+      },
+      {
+        "Date": "2025-07-27",
+        "Total_Sales_A": 6905000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1945000
+      },
+      {
+        "Date": "2025-08-03",
+        "Total_Sales_A": 6415000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 2145000
+      },
+      {
+        "Date": "2025-08-10",
+        "Total_Sales_A": 7510000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1560000
+      },
+      {
+        "Date": "2025-08-17",
+        "Total_Sales_A": 7055000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1640000
+      },
+      {
+        "Date": "2025-08-24",
+        "Total_Sales_A": 7100000,
+        "tv_A": 0,
+        "web_A": 17500,
+        "tv_A.1": 0,
+        "web_A.1": 17500,
+        "Total_Sales_B": 1530000
+      },
+      {
+        "Date": "2025-08-31",
+        "Total_Sales_A": 7255000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1630000
+      },
+      {
+        "Date": "2025-09-07",
+        "Total_Sales_A": 7325000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1675000
+      },
+      {
+        "Date": "2025-09-14",
+        "Total_Sales_A": 7075000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1535000
+      },
+      {
+        "Date": "2025-09-21",
+        "Total_Sales_A": 7175000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1610000
+      },
+      {
+        "Date": "2025-09-28",
+        "Total_Sales_A": 7250000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1505000
+      },
+      {
+        "Date": "2025-10-05",
+        "Total_Sales_A": 7320000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1570000
+      },
+      {
+        "Date": "2025-10-12",
+        "Total_Sales_A": 7260000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1500000
+      },
+      {
+        "Date": "2025-10-19",
+        "Total_Sales_A": 7095000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1535000
+      },
+      {
+        "Date": "2025-10-26",
+        "Total_Sales_A": 7155000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1730000
+      },
+      {
+        "Date": "2025-11-02",
+        "Total_Sales_A": 7005000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1735000
+      },
+      {
+        "Date": "2025-11-09",
+        "Total_Sales_A": 7065000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1530000
+      },
+      {
+        "Date": "2025-11-16",
+        "Total_Sales_A": 7085000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1760000
+      },
+      {
+        "Date": "2025-11-23",
+        "Total_Sales_A": 6955000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1865000
+      },
+      {
+        "Date": "2025-11-30",
+        "Total_Sales_A": 7020000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1780000
+      },
+      {
+        "Date": "2025-12-07",
+        "Total_Sales_A": 6995000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1985000
+      },
+      {
+        "Date": "2025-12-14",
+        "Total_Sales_A": 6950000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1885000
+      },
+      {
+        "Date": "2025-12-21",
+        "Total_Sales_A": 6770000,
+        "tv_A": 0,
+        "web_A": 0,
+        "tv_A.1": 0,
+        "web_A.1": 0,
+        "Total_Sales_B": 1870000
+      }
+    ]
+  }
+}
